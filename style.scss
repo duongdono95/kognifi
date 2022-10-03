@@ -1,0 +1,326 @@
+$primary_color : linear-gradient( to bottom right, #866039, #E75757);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1597655601841-214a4cfe8b2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+header {
+width: 100vw;
+height: 500px;
+background-image: linear-gradient(to bottom, rgba(#333, 1), rgba(#333, 0) );
+    .header {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        border-bottom: 1px solid white;
+        width: 80vw;
+        height: 120px;
+        top: 8.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+.body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+.showcase {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: rgb(43, 21, 0) 0px 30px 60px -12px, rgba(255, 47, 0, 0.5) 0px 18px 36px -18px;
+
+}
+.showcase video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.title {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.8);
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+    mix-blend-mode: multiply;
+    margin: 0;
+    border-radius: 20px ;
+    border: 15px solid white;
+    padding: 20px;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    margin-top: 60px;
+    font-size: 24px;
+    padding: 15px 50px 15px 50px;
+    border-radius: 20px;
+    font-weight: 600;
+    a {
+        color: #866039;
+        text-decoration: none;
+    }
+}
+.button:hover {
+    box-shadow: 0 0 11px rgba(255, 255, 255, 0.9); 
+}
+.primary-btm {
+    border: none;
+    color: #866039;
+}
+.secondary-btm {
+    background: rgba($color: #ffffff, $alpha: 0.2);
+    backdrop-filter: blur(50px);
+    color: white;
+    border: 3px solid white;
+
+}
+
+.contact-us{
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  
+}
+
+.contact-us__container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 80vh;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    backdrop-filter: blur(90px);
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.hide-btm{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+
+.hide-btm:hover {
+    box-shadow: 0 0 11px rgba(255, 255, 255, 0.9); 
+}
+
+.info-container{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.info{
+    display: flex;
+    color: #333;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 24px;
+}
+.info-title{
+    min-width: 10%;
+    width: 40%;
+}
+.address, .info-title {
+    margin: 5px;
+}
+
+
+
+#map { 
+    height: 70%;
+    border-radius: 20px 20px 0 0;    
+}
+
+.footer {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 120px;
+    background-image: linear-gradient(to top, rgba(rgb(0, 0, 0), 0.8), rgba(#333, 0) );
+}
+.hidden {
+    display: none;
+}
+
+// Destination
+.destination__title {
+    width: 95%;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+.destination-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.destination{
+    position: fixed;
+    display: block;
+    max-width: 1425px;
+    min-height: 700px;
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+    backdrop-filter: blur(20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border: 2px solid rgba($color: #fff, $alpha: 0.7);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 11px rgba(255, 255, 255, 0.9);
+}
+
+.tab-item {
+    max-width: 305px;
+    margin: 25px;
+    cursor: pointer;
+    opacity: 0.6;
+    padding: 15px;
+}
+.tab-item:hover {
+    opacity: 1;
+}
+.tab-item.active {
+    opacity: 1;
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.tab-title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.tab-image1 {
+    width: 275px;
+    height: 275px;
+    background-image: url(/img/destination/Akl.png);
+    margin: 0 auto;
+}
+.tab-image2 {
+    width: 275px;
+    height: 275px;
+    background-image: url(/img/destination/Welly.png);
+}
+.tab-image3 {
+    width: 275px;
+    height: 275px;
+    background-image: url(/img/destination/Christchurch.png);
+}
+.tab-image4 {
+    width: 275px;
+    height: 275px;
+    background-image: url(/img/destination/Queenstown.png);
+}
+
+// tab content
+.tab-content {
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    min-height: 120px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 25px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+.tab-pane {
+    display: none;
+}
+.tab-pane.active {
+    display: block;
+}
+.destination-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.destination-hide-btm {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+.destination-hide-btm:hover {
+    box-shadow: 0 0 11px rgba(255, 255, 255, 0.9); 
+}

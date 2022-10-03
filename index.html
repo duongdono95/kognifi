@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="#"><img class="logo" src="/img/KOGNIFI.png" alt="logo"></a>
+        </div>
+    </header>
+    <div class="body">
+        <div class="body_filter">
+            <h1>WELCOME TO</h1>
+            <section class="showcase">
+                <h1 class="title">KOGNIFI NEW ZEALAND</h1>
+            </section>
+            <div class="btn-container">
+                <button class="button primary-btm">Booking</a></button>
+                <button class="button secondary-btm">Contact Us</button>
+            </div>
+        </div>
+    </div>
+    <div class="contact-us hidden">
+        <div class="contact-us__container">
+            <div id="map"></div>
+            <div class="info-container">
+                <div class="info">
+                    <p class="info-title">Email:</p>
+                    <p class="address">duong.dono95@gmail.com</p>
+                </div>
+                <div class="info">
+                    <p class="info-title">Address:</p>
+                    <p class="address">16 Liverpool Street, Auckland CBD, 1010</p>
+                </div>
+                <div class="info">
+                    <p class="info-title">Phone Number:</p>
+                    <p class="address">(+64) 22 507 5844</p>
+                </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-circle-xmark hide-btm"></i>
+    </div>
+    <!-- destination pop-up -->
+    <div class="destination-container hidden">
+        <div class="destination">
+            <p class="destination__title">Choose your Destination</p>
+            <div class="tabs">
+                <div class="tab-item active">
+                    <p class="tab-title">
+                        Auckland
+                    </p>
+                    <div class="tab-image1"></div>
+                </div>
+                <div class="tab-item">
+                    <p class="tab-title">
+                        Wellington
+                    </p>
+                    <div class="tab-image2"></div>
+                </div>
+                <div class="tab-item">
+                    <p class="tab-title">
+                        Christchurch
+                    </p>
+                    <div class="tab-image3"></div>
+                </div>
+                <div class="tab-item">
+                    <p class="tab-title">
+                        Queenstown
+                    </p>
+                    <div class="tab-image4"></div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <!-- destination content -->
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <p>Auckland is New Zealands most populous city and is a multi-cultural hub of food, music, arts and culture. Also known as Tāmaki Makaurau, Auckland sprawls over volcanic hills and around twin harbours, offering an exhilarating mix of natural wonders and urban adventures.</p>
+                </div>
+                <div class="tab-pane">
+                    <p>Situated at the southern end of the North Island, Wellington, New Zealand, was recently named "the coolest little capital in the world" by Lonely Planet.</p>
+                </div>
+                <div class="tab-pane">
+                    <p>Christchurch is one of the worlds most unique destinations, combining urban regeneration and innovation with heritage, culture and exhilarating activity.</p>
+                </div>
+                <div class="tab-pane">
+                    <p>Queenstown is one of New Zealands most exciting destinations. Surrounded by towering mountains, positioned on the edge of a lake, Queenstown is a hub of adventure, thrumming with adrenaline and an omnipresent sense of fun.</p>
+                </div>
+            </div>
+            <button class="destination-button button primary-btm"><a href="/step2-customisation/customisation.html">Next</a></button>
+            <i class="fa-solid fa-circle-xmark destination-hide-btm"></i>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

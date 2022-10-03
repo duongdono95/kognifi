@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="/step2-customisation/customisation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="/step2-customisation/customisation2.js" defer></script>
+    <script src="/step2-customisation/validator.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+           <div id="logo">
+            <a href="/index.html"><img class="logo" src="/img/KOGNIFI.png" alt="logo"></a>
+           </div>
+        </div>
+    </header>
+
+    <section class="input__container">
+        <p class="input-title">KOGNIFI - Auckland</p>
+       <div class="customisation">
+        <div class="input__section left">
+            <div class="input__item">
+                <label for="d1" class="inpput__title">Check-in From</label>
+                <input type="date" id="d1">
+            </div>
+            <div class="input__item">
+                <label for="d2" class="inpput__title">To</label>
+                <input type="date" id="d2">
+            </div>
+            <p id="output" class="inpput__title"></p>
+        </div>
+        <div class="input__section center">
+            <div class="input__item">
+                <label for="checkout" class="inpput__title">Number of guest</label>
+                <input class="number_of_guest d2" type="number"  placeholder="--" min="1" max="10">
+            </div>
+        </div>
+        <div class="input__section right">
+            <div class="input__item">
+                <label for="checkout" class="inpput__title">Budget per day</label>
+                <select name="budgets" title="d3" class="budget d2">
+                    <option value="0"> $0.00 </option>
+                    <option value="50"> less than $50.00 </option>
+                    <option value="100"> less than $100.00 </option>
+                    <option value="200"> less than $200.00 </option>
+                    <option value="300"> less than $300.00 </option>
+                </select>
+            </div>
+        </div>
+        <button id="search">Search</button>
+       </div>
+    </section>
+    <p id="title">Recommended acommodation</p>
+    <div class="body">
+        <div class="accommodation__group">
+                <div class="tabs">
+                    <div class="tab-item tab-active">
+                        <p class="tab-title" data-id="All">
+                            All
+                        </p>
+                    </div>
+                    <div class="tab-item">
+                        <p class="tab-title" data-id="Hotel">
+                            Hotel
+                        </p>
+                    </div>
+                    <div class="tab-item">
+                        <p class="tab-title" data-id="Hostel">
+                            Hostel
+                        </p>
+                    </div>
+                    <div class="tab-item">
+                        <p class="tab-title" data-id="Motel">
+                            Motel
+                        </p>
+                    </div>
+                    <div class="tab-item">
+                        <p class="tab-title" data-id="House">
+                            House
+                        </p>
+                    </div>
+                    <div class="tab__line"></div>
+                </div>
+            <div class="accommodation__container">
+            
+                <!-- <div class="option">
+                    <div class="img__container">
+                                <img id="img" src="${img}" alt="">
+                                <i class="fa-solid fa-image" id="img__icon"></i>
+                            </div>
+                            <div class="option__info">
+                                <div class="option-offset">
+                                    <p class="option__name">${name} ${type}</p>
+                                    <div class="info__container">
+                                        <div class="detail">
+                                            <i class="fa-solid fa-user icon"></i>
+                                            <p class="description">${minGuest} to ${maxGuest} people</p>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fa-solid fa-location-dot icon"></i>
+                                            <p class="description">${location}</p>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fa-solid fa-moon icon"></i>
+                                            <p class="description">Min: ${minDay} night(s)  -  Max: ${maxDay} night(s)</p>
+                                        </div>
+                                        <div class="detail">
+                                            <i class="fa-solid fa-dollar-sign icon"></i>
+                                            <p class="description">from $${price} p/n</p>
+                                        </div>
+                                        <div class="breakfast-detail">
+                                            <i class="fa-solid fa-bowl-food icon"></i>
+                                            <div class="breakfast__options">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+            </div>
+        </div>
+        
+        <div class="bill">
+           <div class="bill__container">
+                <p class="bill__title">Booking Detail:</p>
+                <div class="bill__detail">
+                    <div class="detail__group">
+                        <p class="accommodation__title">Accommodation:</p>
+                        <p class="accommodation__value">--</p>
+                    </div>
+                    <div class="detail__group">
+                        <p class="accommodation__title">Type:</p>
+                        <p class="accommodation__value">--</p>
+                    </div>
+                    <div class="detail__group">
+                        <p class="accommodation__title">Price:</p>
+                        <p class="accommodation__value">-- P/n</p>
+                    </div>
+                    <div class="detail__group">
+                        <p class="accommodation__title">Duration: </p>
+                        <p class="accommodation__value">-- night(s)</p>
+                    </div>
+                    <div class="detail__group">
+                        <p class="accommodation__title">Number of Guest:</p>
+                        <p class="accommodation__value">--</p>
+                    </div>
+                    <div class="breakfast__group">
+                        <p class="breakfast__title">Breakfast Option:</p>
+                        <div class="breakfast__options">
+                        </div>
+                        
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="total">
+                    <p class="total__title">Total:</p>
+                    <p class="total__value">--</p>
+                </div>
+                <div class="button__container">
+                    <button id="bill__button">Next</button>
+                </div>
+           </div>
+
+        </div>
+    </div>
+    <div class="container--form hidden">
+        <div class="moda">
+            <form action="" method="POST" class="form" id="register-form">
+                <h3 class="heading">Reservation Form</h3>
+                
+                <div class="spacer"></div>
+                
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input id="fullname" name="fullname" rules="required" type="text" placeholder="Eg: Bach Thanh Duong" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" rules="required|email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" name="password" rules="required|min:6" type="password" placeholder="*************" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+                <button class="form-submit">Submit</button>
+            </form>
+            <i class="fa-solid fa-circle-xmark hide-btm"></i>
+        </div>
+    </div>
+    <script src="/step2-customisation/validator.js"></script>
+    <script>
+         Validator('#register-form')
+    </script>
+</body>
+</html>

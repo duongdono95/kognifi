@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Video Player Demo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "kognifi"
+	}
+}
